@@ -49,7 +49,8 @@ module.exports = {
 					res.end();
 				}
 			}, () => {
-				console.log('[select user error!:]', err.sqlMessage);
+				//console.log('[select user error!:]', err.sqlMessage);
+				console.log("失败");
 			});
 		})
 	},

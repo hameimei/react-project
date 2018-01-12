@@ -11,7 +11,7 @@ const homeRouter = require('./routers/homeController');
 
 connection.connect(function(err) {
   if(err) {
-    console.log('!!!somethings runing wrong:' + err);
+    console.log('呜呜，失败了:' + err);
     return;
   }
   console.log('[connection connect] succeed!');
@@ -42,17 +42,17 @@ const server = http.createServer((req, res) => {
 	app.use('/form/register', loginRouter.render('register'));
 	app.use('/form/login/error', errorRouter.render({
 		status: '403',
-		errMsg: 'username or password error',
+		errMsg: '用户名或者密码填错了，你个大西瓜',
 	}));
 	app.use('/form/register/error', errorRouter.render({
 		status: '403',
-		errMsg: 'user had existed...'
+		errMsg: '此用户名已注册，笨蛋啊你'
 	}));
 	app.use('/home', homeRouter.render);
 	
 	// handle request
 	app.handle(req, res);
 
-}).listen(4567, () => {
-	console.log('server is running at port 4567...');
+}).listen(3000, () => {
+	console.log('server is running at port 3000...');
 });

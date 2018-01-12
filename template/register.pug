@@ -3,15 +3,20 @@ block links
 	+_link('../static/src/css/register.css')
 block doms
 	div.form-container
-		h2.title Apply for Membership
-		form(action="/form/addUser" method="post" enctype="application/x-www-form-urlencoded")
+		h2.title 注册VIP
+		form(action="/form/addUser" class="form-content" method="post" enctype="application/x-www-form-urlencoded")
 			p
-				span username:
-				input(type="text" name="username" class="form-username" placeholder="the username you wanna register")
+				label(for="username") 用户名：
+				input(type="text" name="username" class="input-box" placeholder="请输入您的用户名")
 			p
-				span password:
-				input(type="password" name="password" class="form-password" placeholder="the password you wanna register")
+				label(for="address") 详细地址：
+				input(type="text" id="address" name="address" class="input-box" placeholder="请输入您的详细地址")
+			p
+				label(for="password") 密&nbsp;&nbsp;&nbsp;码：
+				input(type="password" name="password" class="input-box" placeholder="请输入密码")
 			p.btn-area
-				input(type="submit" class="form-submit" value="register")
-				a(href="/form")
-					input(type="button" class="form-return" value="return to login")
+				input(type="submit" id="submit" class="button" value="注册")
+				input(type="reset" id="reset" class="button" value="重置")
+		div.backLogin
+			a(href="/form")
+				input(type="button" id="back" class="button" value="返回登录")
