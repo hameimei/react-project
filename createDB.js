@@ -13,7 +13,7 @@ const createTuser = `CREATE TABLE Tuser(
   age int,
   profile varchar(30),
   password varchar(30)
-);`
+);`;
 const createTvideo = `CREATE TABLE Tvideo(
   vid int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   uid int NOT NULL,
@@ -32,7 +32,7 @@ const createTvideo = `CREATE TABLE Tvideo(
   FOREIGN KEY(uid) REFERENCES Tuser(id)
 );`;
 
-[createTuser, createTvideo].forEach(item => {
+[createTuser, changeTuser,createTvideo].forEach(item => {
   connection.query(item, (err) => {
     if(err) {
       console.log('[create database error!]:', err);

@@ -5,8 +5,8 @@
 3. video-player实现视频上传
 4. 视频蒙层，hover显示数据信息
 5. 改造node层，增加获取数据信息的接口
-8. 修改信息部分从form表单上传改为fetch上传
-1. 用户注册，登录，修改个人信息，退出
+6. 修改信息部分从form表单上传改为fetch上传
+7. 用户注册，登录，修改个人信息，退出
 ## 技术栈
 1. node.js (为了锻炼nodejs流程，没用express和koa框架，特意用原生写的)
 2. react.js （项目太小为了省事直接用react没用redux）
